@@ -1,0 +1,10 @@
+package version // import "github.com/tappoy/version"
+
+This package provides a workaround for the problem that ldflags does not work
+during `go install` and cannot display embedded versions.
+
+FUNCTIONS
+
+func Version() (string, bool)
+    Return runtime version of main. If failed to get version, return false.
+
