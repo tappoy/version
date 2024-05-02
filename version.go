@@ -6,11 +6,11 @@ import (
 )
 
 // Return runtime version of main.
-// If failed to get version, return false.
-func Version() (string, bool) {
+// If failed to get version, return "(unknown)".
+func Version() string {
 	v, ok := debug.ReadBuildInfo()
 	if !ok {
-		return "", ok
+		return "(unknown)"
 	}
-	return v.Main.Version, true
+	return v.Main.Version
 }

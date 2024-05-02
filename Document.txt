@@ -5,6 +5,7 @@ during `go install` and cannot display embedded versions.
 
 FUNCTIONS
 
-func Version() (string, bool)
-    Return runtime version of main. If failed to get version, return false.
+func Version() string
+    Return runtime version of main. If failed to get version, return
+    "(unknown)".
 

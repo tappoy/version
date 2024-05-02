@@ -5,12 +5,9 @@ import (
 )
 
 func TestVersion(t *testing.T) {
-	v, ok := Version()
-	if !ok {
-		t.Errorf("Version() should return true, but got false")
-	}
+	v := Version()
 
 	if v != "" {
-		t.Errorf("Version() should return (development), but got <%s>", v)
+		t.Errorf("Version() should return empty string, but got %s", v)
 	}
 }
